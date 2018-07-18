@@ -22,7 +22,7 @@ import java.util.List;
  */
 
 @RestController
-@CrossOrigin
+@CrossOrigin (origins = {"http://192.168.1.51:3004", "http://181.49.210.130:3004" })
 @Api(value = "Activo microservice", description = "This API has a CRUD for Activos Fijos")
 @RequestMapping("api/activos")
 public class ActivoController {
