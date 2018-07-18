@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "f01aec4d-f7b5-4d0e-aeaa-4fb812d4398f",
+		"name": "Activos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consulta de Activos API REST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://181.49.210.130:3003/api/activos",
+					"protocol": "http",
+					"host": [
+						"181",
+						"49",
+						"210",
+						"130"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"activos"
+					]
+				},
+				"description": "Consulta de Activos API REST"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta de un Activo por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://181.49.210.130:3003/api/activos/5b4cd0a26b133c354372c009",
+					"protocol": "http",
+					"host": [
+						"181",
+						"49",
+						"210",
+						"130"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"activos",
+						"5b4cd0a26b133c354372c009"
+					]
+				},
+				"description": "Consulta de un Activo por ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta de Activo por Serial",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://181.49.210.130:3003/api/activos/BySerial/10001-100001",
+					"protocol": "http",
+					"host": [
+						"181",
+						"49",
+						"210",
+						"130"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"activos",
+						"BySerial",
+						"10001-100001"
+					]
+				},
+				"description": "Consulta de Activo por Serial"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta de activos por Tipo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://181.49.210.130:3003/api/activos/ByType/maquinaria",
+					"protocol": "http",
+					"host": [
+						"181",
+						"49",
+						"210",
+						"130"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"activos",
+						"ByType",
+						"maquinaria"
+					]
+				},
+				"description": "Consulta de activos por Tipo"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta de Activos por fecha",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://181.49.210.130:3003/api/activos/ByDate/2010-01-01",
+					"protocol": "http",
+					"host": [
+						"181",
+						"49",
+						"210",
+						"130"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"activos",
+						"ByDate",
+						"2010-01-01"
+					]
+				},
+				"description": "Consulta de Activos desde fecha indicada"
+			},
+			"response": []
+		},
+		{
+			"name": "Creacion de Activos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"nombre\": \"Computador Portatil\",\n        \"descripcion\": \"Computador para Administracion\",\n        \"tipo\": \"material de oficina\",\n        \"serial\": \"10001-8871110\",\n        \"numero_inventario\": \"010101-96321\",\n        \"peso\": 25,\n        \"alto\": 60.23,\n        \"ancho\": 963,\n        \"largo\": 45.25,\n        \"valor_compra\": 1000000,\n        \"fecha_compra\": \"2017-06-18T15:23:01.445+0000\",\n        \"feha_baja\": null,\n        \"estado\": \"activo\",\n        \"color\": \"Blanco\",\n        \"asignacion\": null\n    }"
+				},
+				"url": {
+					"raw": "http://181.49.210.130:3003/api/activos",
+					"protocol": "http",
+					"host": [
+						"181",
+						"49",
+						"210",
+						"130"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"activos"
+					]
+				},
+				"description": "Creacion de Activos"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizacion de un Activo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"nombre\": \"Sopladora\",\n        \"descripcion\": \"Sopladora industrial\",\n        \"tipo\": \"maquinaria\",\n        \"serial\": \"96311447\",\n        \"numero_inventario\": \"96321-844\",\n        \"peso\": 23,\n        \"alto\": 23,\n        \"ancho\": 23,\n        \"largo\": 23,\n        \"valor_compra\": 50000,\n        \"fecha_compra\": \"2018-07-18T00:00:00.000+0000\",\n        \"feha_baja\": null,\n        \"estado\": \"activo\",\n        \"color\": \"Azul\",\n        \"id\": \"5b4f8406bdb0ee32e0c20259\",\n        \"asignacion\": null\n    }"
+				},
+				"url": {
+					"raw": "http://181.49.210.130:3003/api/activos",
+					"protocol": "http",
+					"host": [
+						"181",
+						"49",
+						"210",
+						"130"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"activos"
+					]
+				},
+				"description": "Permite actualizar un Activo"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar un Activo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://181.49.210.130:3003/api/activos/5b4f75fcbdb0ee32e0c20257",
+					"protocol": "http",
+					"host": [
+						"181",
+						"49",
+						"210",
+						"130"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"activos",
+						"5b4f75fcbdb0ee32e0c20257"
+					]
+				},
+				"description": "Elimina un Activo por ID"
+			},
+			"response": []
+		}
+	]
+}
